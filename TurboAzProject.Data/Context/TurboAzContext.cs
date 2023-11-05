@@ -57,7 +57,7 @@ namespace TurboAzProject.Data.Context
         public virtual DbSet<Year> Years { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=NURLANJAVADZADA;Initial Catalog=TurboAz;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            => optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=STHQ0123-02;Initial Catalog=TurboAz;User ID=admin;Password=admin;Connect Timeout=30;Encrypt=False;");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -11,7 +11,7 @@
         <!--Main Grid Rows-->
         <Grid.RowDefinitions>
             <RowDefinition Height="0.9*"></RowDefinition>
-            <RowDefinition Height="1.4*"></RowDefinition>
+            <RowDefinition Height="1.8*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -28,7 +28,9 @@
         <Grid Grid.Row="1" Background="#FFDC143C">
             <TextBlock Margin="140,0,550,0" Padding="7" FontWeight="Bold" FontSize="17" Foreground="White">TURBO.AZ</TextBlock>
             <TextBlock Margin="230,0,150,0" Padding="8" FontSize="14" Foreground="White" Text=" Butun elanlar  Salonlar   Moto   Ehtiyyat hisseleri ve aksesuarlar"></TextBlock>
-            <Button Margin="665,0,42,0" Background="LightGreen" Foreground="White" FontSize="15" BorderThickness="0" Click="Button_Click_1"  >Yeni elan</Button>
+          
+                    <Button Panel.ZIndex="1"  Margin="674,0,42,10" Background="LightGreen" Foreground="White" FontSize="15" BorderThickness="0" Click="Button_Click_1"  >Yeni elan</Button>
+
         </Grid>
 
         <!--Grid ROw 3-->
@@ -37,38 +39,42 @@
             <StackPanel Height="30" Orientation="Horizontal" Margin="20 10 0 0">
                 <Border Background="LightGray" BorderThickness="1" BorderBrush="LightGray" CornerRadius="6"  Width="110">
                     <Grid>
-                      
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="1" Text="Marka" Margin="35,5,33,7"></TextBlock>
                         <ComboBox x:Name="MarkaCBX" BorderThickness="0" Margin="2  2 2  2" SelectionChanged="MarkaCBX_SelectionChanged"/>
                     </Grid>
                 </Border>
 
                 <Border Background="LightGray" CornerRadius="6"  BorderThickness="1"  Margin="10 0 0 0"   Width="110">
                     <Grid>
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="1" Text="Model" Margin="35,5,33,7"></TextBlock>
+
                         <ComboBox BorderThickness="0" x:Name="ModelCBX"  Margin="2 2 2 2"></ComboBox>
                     </Grid>
                 </Border>
 
                 <Border Background="LightGray" CornerRadius="6" Margin="10 0 0 0"  Width="110" >
                     <Grid>
-                        <Button BorderThickness="0" x:Name="YeniHamsiBTN" Margin="1 1 1 1" Content="Hamsi" />
+                        <Button BorderThickness="0" Foreground="DarkGray" x:Name="YeniHamsiBTN" Margin="2 2 2 2" Content="All" />
                     </Grid>
                 </Border>
 
                 <Border Background="LightGray" CornerRadius="6" Margin="10 0 0 0"  Width="90">
                     <Grid>
-                        <Button BorderThickness="0" x:Name="YeniBTN"  Margin="1 1 1 1" Content="Yeni"  />
+                        <Button BorderThickness="0" Foreground="DarkGray" x:Name="YeniBTN"  Margin="2 2 2 2" Content="New"  />
                     </Grid>
                 </Border>
 
                 <Border  Background="LightGray" CornerRadius="6" Margin="10 0 0 0"  Width="90">
                     <Grid>
-                        <Button BorderThickness="0" x:Name="KohneBTN"  Margin="1 1 1 1" Content="Kohne"  />
+                        <Button BorderThickness="0" Foreground="DarkGray" x:Name="KohneBTN"  Margin="2 2 2 2" Content="Old"  />
                     </Grid>
                 </Border>
 
                 <Border  Background="LightGray" CornerRadius="6" Margin="10 0 0 0"   Width="110">
                     <Grid>
-                        <ComboBox BorderThickness="0" x:Name="CityCBX"  Margin="1,1,1,1"/>
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="1" Text=" City" Margin="35,5,33,7"></TextBlock>
+
+                        <ComboBox BorderThickness="0" x:Name="CityCBX"  Margin="2,2,2,2"/>
                     </Grid>
                 </Border>
             </StackPanel>
@@ -79,43 +85,49 @@
             <StackPanel Height="30" Orientation="Horizontal" Margin="20 10 0 0">
                 <Border Background="White" CornerRadius="6" BorderThickness="2" BorderBrush="LightGray" Margin="10 0 0 0"   Width="70" >
                     <Grid>
-                        <TextBox BorderThickness="0" x:Name="PriceMinTBX" Margin="2 2 2 2"  >Price Min</TextBox>
+                        <TextBox BorderThickness="0"  Padding="2" Foreground="DarkGray" x:Name="PriceMinTBX" Margin="2 2 2 2"  >Price Min</TextBox>
                     </Grid>
                 </Border>
                 <Border  Background="White" CornerRadius="6" BorderThickness="2" BorderBrush="LightGray" Margin="10 0 0 0"   Width="70">
                     <Grid>
-                        <TextBox BorderThickness="0"  x:Name="PriceMAXTBX" Margin="2 2 2 2" Width="70" >Price Max</TextBox>
+                        <TextBox BorderThickness="0"  Padding="2" Foreground="DarkGray"  x:Name="PriceMAXTBX" Margin="2 2 2 2" Width="70" >Price Max</TextBox>
                     </Grid>
                 </Border>
                 <Border   BorderThickness="2" BorderBrush="LightGray" Margin="10 0 0 0" CornerRadius="6">
                     <Grid>
-                        <TextBox x:Name="YEARmINTBX" BorderThickness="0"  Margin="2 2 2 2" Width="50" >Year Min</TextBox>
+                        <TextBox x:Name="YEARmINTBX" Padding="2" Foreground="DarkGray" BorderThickness="0"  Margin="2 2 2 2" Width="51" >Year Min</TextBox>
                     </Grid>
                 </Border>
                 <Border BorderThickness="2" CornerRadius="6" Margin="10 0 0 0" BorderBrush="LightGray">
                     <Grid>
 
-                        <TextBox x:Name="YEARmaxTBX" BorderThickness="0"  Margin="1 1 1 1" Width="70" >Year Max</TextBox>
+                        <TextBox x:Name="YEARmaxTBX"  Padding="3" Foreground="DarkGray" BorderThickness="0"  Margin="1 1 1 1" Width="70" >Year Max</TextBox>
                     </Grid>
                 </Border>
                 <Border BorderThickness="2" CornerRadius="6" Margin="10 0 0 0" BorderBrush="LightGray">
                     <Grid>
-                        <TextBox  x:Name="EnginemTBX"  BorderThickness="0"  Margin="1 1 1 1" Width="70" >Engine</TextBox>
+                        <TextBox  x:Name="EnginemTBX" Foreground="DarkGray" Padding="3"  BorderThickness="0"  Margin="1 1 1 1" Width="70" >Engine</TextBox>
+                    </Grid>
+                </Border>
+                <Border BorderThickness="2" CornerRadius="6" Margin="9 0 0 0" BorderBrush="LightGray">
+                    <Grid>
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="4" Text="Accelerating Box" ></TextBlock>
+
+                        <ComboBox  x:Name="AccBoxCBX" BorderThickness="0" Margin="1 1 1 1" Width="110" ></ComboBox>
                     </Grid>
                 </Border>
                 <Border BorderThickness="2" CornerRadius="6" Margin="10 0 0 0" BorderBrush="LightGray">
                     <Grid>
-                        <ComboBox  x:Name="AccBoxCBX" BorderThickness="0" Margin="1 1 1 1" Width="100" ></ComboBox>
-                    </Grid>
-                </Border>
-                <Border BorderThickness="2" CornerRadius="6" Margin="10 0 0 0" BorderBrush="LightGray">
-                    <Grid>
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="0" Text="Color" Margin="35,5,33,7"></TextBlock>
+
                         <ComboBox  x:Name="ColorTBX" BorderThickness="0" Margin="1 1 1 1" Width="100" ></ComboBox>
                     </Grid>
                 </Border>
 
                 <Border BorderThickness="2" CornerRadius="6" Margin="10 0 0 0" BorderBrush="LightGray">
                     <Grid>
+                        <TextBlock Panel.ZIndex="2" Foreground="DarkGray" Padding="4" Text="      Fuel Type"></TextBlock>
+
                         <ComboBox  x:Name="fUELTYPETBX" BorderThickness="0" Margin="1 1 1 1" Width="100" ></ComboBox>
                     </Grid>
                 </Border>

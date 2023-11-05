@@ -174,14 +174,14 @@ namespace TurboAzProject.UI
             Marka marka = new Marka();
             foreach (var item in Context.Markas.ToList())
             {
-                if (item.MarkaName==selectedMarkaname)
+                if (item.MarkaName == selectedMarkaname)
                 {
                     marka = item;
                 }
             }
             if (marka != null)
             {
-                int selectedMarkaID = marka.Id+2;
+                int selectedMarkaID = marka.Id + 2;
                 var filteredModeller = Context.Models.Where(m => m.MarkaId == selectedMarkaID).ToList();
                 List<string> bzmaasa = new List<string>();
                 foreach (var item in filteredModeller)
